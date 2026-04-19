@@ -1,0 +1,22 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import './Controller/Controller.dart';
+import 'Controller/Service.dart';
+import 'HomeScreen.dart';
+
+void main() {
+  Get.put(UserService());
+  Get.put(UserController());
+
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GetMaterialApp(
+      title: 'Dependency Management with GetX',
+      home: HomeScreen(),
+    );
+  }
+}

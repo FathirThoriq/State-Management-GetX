@@ -1,0 +1,11 @@
+import './User.dart';
+
+class UserService {
+  User getUser() {
+    return User(name: "John Doe", age: 30);
+  }
+
+  User createUser(String name, int age) {
+    return User(name: name, age: age);
+  }
+}
